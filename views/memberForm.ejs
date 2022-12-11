@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">Fee Payment</h1>
+    <div class="col-6 offset-3">
+        <form action="/" method="POST" novalidate class="validated-form">
+            <div class="mb-3 p-3">
+                <label class="form-label" for="Name">Name</label>
+                <input class="form-control" type="text" id="Name" name="member[name]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3 p-3">
+                <label class="form-label" for="age">Age</label>
+                <input class="form-control" type="number" id="age" name="member[age]" min="18" max="65" value="18" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+            <div class="mb-3 p-3">
+                <label class="form-label" for="price">Fees to be Paid</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price">&#x20B9 500</span>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3 p-3">
+                <label class="form-label" for="batch">Select Slot</label>
+                <select class="form-select" aria-label="Select Slot" name="member[batch]" id="batch">
+                    <!-- <option selected>Select Slot</option> -->
+                    <option value="6-7AM" selected>6-7AM</option>
+                    <option value="7-8AM">7-8AM</option>
+                    <option value="8-9AM">8-9AM</option>
+                    <option value="5-6PM">5-6PM</option>
+                  </select>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Pay Fees</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
